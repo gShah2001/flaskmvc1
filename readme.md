@@ -191,3 +191,85 @@ If you are running into errors in gitpod when updateding your github actions fil
 ## Database Issues
 
 If you are adding models you may need to migrate the database with the commands given in the previous database migration section. Alternateively you can delete you database file.
+
+## Student Commands
+Command Group: flask student
+
+Create a Student
+Command: flask create-student <name> <email> <password>
+Description: Creates a student with the given name, email, and password.
+Example: flask create-student john john@mail.com pass123
+
+Login a Student
+Command: flask login <name> <password>
+Description: Logs in a student with the given name and password.
+Example: flask login john pass123
+
+View Competitions
+Command: flask view-competitions
+Description: Lists all available competitions.
+
+Update Student Info
+Command: flask update-info <student_id> --name <new_name> --email <new_email>
+Description: Updates the student's name and email.
+
+Delete a Student
+Command: flask delete <student_id>
+Description: Deletes a student by ID.
+
+Get All Students
+Command: flask get-all
+Description: Retrieves all students from the database.
+
+Get Student by ID
+Command: flask get-by-id <student_id>
+Description: Retrieves a student by ID.
+
+## Competition Organizer Commands
+Command Group: flask competitionOrganizer
+Create a Competition Organizer
+Command: flask create-comporg <organizer_id> <username> <email> <password>
+Description: Creates a competition organizer.
+
+List All Organizers
+Command: flask list-all-org
+Description: Lists all competition organizers.
+
+View Organizer by ID
+Command: flask view-org <organizer_id>
+Description: View details of a competition organizer by ID.
+
+Delete Organizer by ID
+Command: flask delete-org <organizer_id>
+Description: Deletes a competition organizer by ID.
+
+## Competition Commands
+Command Group: flask competition
+Create a Competition
+Command: flask competition create <title> <status> <startDate> <endDate>
+Description: Creates a competition.
+Example: flask competition create CodeStitch Completed 01/01/2020 01/02/2020
+
+List Competitions
+Command: flask competition list
+Description: Lists all competitions.
+
+## Results Commands
+Command Group: flask results
+Import Results
+Command: flask import-results <csv_file>
+Description: Imports results from a CSV file.
+
+Delete Results
+Command: flask delete-results <csv_file>
+Description: Deletes results based on a CSV file.
+
+## Competed Commands
+Command Group: flask competed
+List Competitions for a Student
+Command: flask competed list-competitions <student_id>
+Description: Lists all competitions a student is registered for.
+
+List Students for a Competition
+Command: flask competed list-students <competition_id>
+Description: Lists all students registered for a competition.
